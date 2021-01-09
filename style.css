@@ -1,0 +1,26 @@
+.title {
+  display: block;
+  font-size: 2rem;
+  margin: 30px;
+  text-align: center;
+}
+td {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+tr.week {
+  background-color: lightgray;
+}
+td:first-child {
+  background-color: rgba(255, 0, 0, 0.493);
+}
+td:last-child {
+  background-color: rgba(0, 0, 255, 0.479);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
