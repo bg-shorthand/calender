@@ -8,10 +8,24 @@
   <script defer src="./index.js"></script>
 </head>
 <body>
-  <input class="select-date" type="date">
-  <button class="check">check</button>
+  <h1 class="title"></h1>
+  <div class="menu">
+    <input class="select-date" type="date">
+    <button class="check">check</button>
+    <span class="alert"></span>
+    <button class="add-todo">일정 추가</button>
+  </div>
+  <section class="popup-bg">
+    <main class="popup">
+      <h2>일정을 입력하세요.</h2>
+      <input type="date" class="popup-date">
+      <input type="text" class="popup-heading" placeholder="제목">
+      <textarea class="popup-detail" cols="30" rows="10" placeholder="내용"></textarea>
+      <button class="popup-complited">입력</button>
+      <span class="popup-alert"></span>
+    </main>
+  </section>
   <table>
-    <title class="title"></title>
       <tr class="week">
         <td class="day">SUN</td>
         <td class="day">MON</td>
@@ -23,61 +37,187 @@
       </tr>
       <tr class="week1">
         <td class="day1">
-          <!-- <div class="date"></div>
-          <input type="text" class="input-todo">
-          <ul class="todos"></ul> -->
+          <div class="date"></div>
+          <ul class="todos">
+            <!-- <li class="todo">
+              <span class="todo-heading"></span><button class="delete-todo"></button>
+            </li> -->
+          </ul>
         </td>
-        <td class="day2"></td>
-        <td class="day3"></td>
-        <td class="day4"></td>
-        <td class="day5"></td>
-        <td class="day6"></td>
-        <td class="day7"></td>
+        <td class="day2">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day3">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day4">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day5">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day6">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day7">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
       </tr>
       <tr class="week2">
-        <td class="day8"></td>
-        <td class="day9"></td>
-        <td class="day10"></td>
-        <td class="day11"></td>
-        <td class="day12"></td>
-        <td class="day13"></td>
-        <td class="day14"></td>
+        <td class="day8">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day9">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day10">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day11">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day12">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day13">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day14">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
       </tr>
       <tr class="week3">
-        <td class="day15"></td>
-        <td class="day16"></td>
-        <td class="day17"></td>
-        <td class="day18"></td>
-        <td class="day19"></td>
-        <td class="day20"></td>
-        <td class="day21"></td>
+        <td class="day15">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day16">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day17">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day18">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day19">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day20">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day21">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
       </tr>
       <tr class="week4">
-        <td class="day22"></td>
-        <td class="day23"></td>
-        <td class="day24"></td>
-        <td class="day25"></td>
-        <td class="day26"></td>
-        <td class="day27"></td>
-        <td class="day28"></td>
+        <td class="day22">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day23">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day24">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day25">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day26">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day27">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day28">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
       </tr>
       <tr class="week5">
-        <td class="day29"></td>
-        <td class="day30"></td>
-        <td class="day31"></td>
-        <td class="day32"></td>
-        <td class="day33"></td>
-        <td class="day34"></td>
-        <td class="day35"></td>
+        <td class="day29">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day30">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day31">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day32">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day33">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day34">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day35">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
       </tr>
       <tr class="week6">
-        <td class="day36"></td>
-        <td class="day37"></td>
-        <td class="day38"></td>
-        <td class="day39"></td>
-        <td class="day40"></td>
-        <td class="day41"></td>
-        <td class="day42"></td>
+        <td class="day36">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day37">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day38">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day39">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day40">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day41">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
+        <td class="day42">
+          <div class="date"></div>
+          <ul class="todos"></ul>
+        </td>
       </tr>
   </table>
   <nav class="nav">
